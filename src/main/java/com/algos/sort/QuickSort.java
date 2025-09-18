@@ -21,3 +21,14 @@ public class QuickSort {
             m.enterRecursion();
             int p = ArrayUtils.partition(a, lo, hi, m);
             m.exitRecursion();
+            if (p - lo < hi - p) {
+                quicksort(a, lo, p - 1, m);
+                lo = p + 1;
+            } else {
+                quicksort(a, p + 1, hi, m);
+                hi = p - 1;
+            }
+        }
+
+    }
+}
