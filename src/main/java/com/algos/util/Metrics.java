@@ -7,7 +7,7 @@ public class Metrics {
     private int currentDepth = 0;
     private int maxDepth = 0;
 
-    public void incComparisons() { comparisons++; }
+    public void incComparisons(long n) { comparisons+=n; }
     public void incSwaps() { swaps++; }
     public void incAllocations() { allocations++; }
 

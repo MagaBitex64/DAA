@@ -21,7 +21,7 @@ public class ArrayUtils {
         int pivot = a[hi];
         int i = lo - 1;
         for (int j = lo; j < hi; j++) {
-            m.incComparisons();
+            m.incComparisons(1);
             if (a[j] <= pivot) {
                 i++;
                 swap(a, i, j);

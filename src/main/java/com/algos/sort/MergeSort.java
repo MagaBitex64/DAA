@@ -37,7 +37,7 @@ public class MergeSort {
         int k = lo;
 
         while (i <= mid && j <= hi) {
-            m.incComparisons();
+            m.incComparisons(1);
             if (buffer[i] <= a[j]) {
                 a[k++] = buffer[i++];
             } else {
@@ -54,7 +54,7 @@ public class MergeSort {
             int key = a[i];
             int j = i - 1;
             while (j >= lo) {
-                m.incComparisons();
+                m.incComparisons(1);
                 if (a[j] > key) {
                     a[j + 1] = a[j];
                     m.incSwaps();
