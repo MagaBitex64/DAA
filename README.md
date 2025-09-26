@@ -53,10 +53,10 @@ We also measure running time, recursion depth, and memory usage.
 ## Plots
 
 ### Time vs n
-![Time vs n](images/time_vs_n_final.png)
+![Time vs n](images/time_n.png)
 
 ### Depth vs n
-![Depth vs n](images/depth_vs_n_final.png)
+![Depth vs n](images/depth_n.png)
 
 ---
 ## Summary
