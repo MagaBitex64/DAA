@@ -46,14 +46,17 @@ public class ClosestPair {
         int mid = n / 2;
         Point midPoint = Px[mid];
 
-        Point[] Pyl = new Point[mid];
-        Point[] Pyr = new Point[n - mid];
+        Point[] Pyl = new Point[n];
+        Point[] Pyr = new Point[n];
         int li = 0, ri = 0;
 
         for (int i = 0; i < n; i++) {
             if (Py[i].x <= midPoint.x) Pyl[li++] = Py[i];
             else Pyr[ri++] = Py[i];
         }
+
+        Pyl = Arrays.copyOf(Pyl, li);
+        Pyr = Arrays.copyOf(Pyr, ri);
 
         double dl = closestUtil(Arrays.copyOfRange(Px, 0, mid), Pyl, mid);
         double dr = closestUtil(Arrays.copyOfRange(Px, mid, n), Pyr, n - mid);
